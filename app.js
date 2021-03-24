@@ -15,7 +15,8 @@ toplamMesafe = (noktalar) => {
         for (var i=0; i < noktalar.length-1; i++) {
             toplam += uzunluk(noktalar[i],noktalar[i+1]);
         }
-        toplam += uzunluk(noktalar[0],noktalar[noktalar.length-1]);        
+        if (noktalar.length > 2)
+            toplam += uzunluk(noktalar[0],noktalar[noktalar.length-1]);        
     }
     return toplam;
 }
